@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caldinho do Dogão</title>
-    <!-- Bootstrap CSS -->
+    <title>Reservas - Caldinho do Dogão</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Google Font 'Nunito' -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
@@ -16,7 +14,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-warning">
             <a class="navbar-brand" href="#">
                 <img src="/imgs/logo.png" alt="Logomarca do Caldinho do Dogão" id="logo" class="d-inline-block align-top">
-               <h1> Caldinho do Dogão </h1>
+                Caldinho do Dogão
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/index.html">Reservas</a>
+                        <a class="nav-link" href="/index.html">Reservas <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/cardapio.html">Cardápio</a>
@@ -38,21 +36,28 @@
     </header>
     
     <main role="main" class="container mt-4">
-        <!-- Utilize classes do Bootstrap para o layout -->
         <section id="reservas">
             <h2>Reserve sua Mesa</h2>
-            <form id="reserva-form">
+            <form id="reserva-form" action="processa_reserva.php" method="post">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" class="form-control" required>
                 </div>
                 <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="data-reserva">Data da Reserva:</label>
+                    <input type="date" id="data-reserva" name="data_reserva" class="form-control" required>
+                </div>
+                <div class="form-group">
                     <label for="quantidade-pessoas">Quantidade de Pessoas:</label>
-                    <input type="number" id="quantidade-pessoas" name="quantidade-pessoas" class="form-control" required min="1">
+                    <input type="number" id="quantidade-pessoas" name="quantidade_pessoas" class="form-control" required min="1">
                 </div>
                 <div class="form-group">
                     <label for="comanda-individual">Comanda Individual:</label>
-                    <select id="comanda-individual" name="comanda-individual" class="form-control">
+                    <select id="comanda-individual" name="comanda_individual" class="form-control">
                         <option value="sim">Sim</option>
                         <option value="nao">Não</option>
                     </select>
@@ -60,7 +65,6 @@
                 <button type="submit" class="btn btn-danger">Reservar Mesa</button>
             </form>
         </section>
-        <!-- Mais conteúdo aqui -->
     </main>
     
     <footer class="bg-dark text-white mt-4 py-3 text-center">
