@@ -1,89 +1,72 @@
-/* Variáveis de cores */
+/* admin.css */
+
+/* Importação da fonte 'Nunito' */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+
+/* Variáveis Globais */
 :root {
-    --primary-color: #FFD700; /* Amarelo Dourado */
-    --secondary-color: #FF0000; /* Vermelho */
-    --dark-color: #343a40; /* Cinza escuro */
-    --light-color: #FFFFFF; /* Branco */
-    --text-color: #000000; /* Preto */
+    --color-primary: #E1A95F; /* Cor escolhida da logo */
+    --color-secondary: #FF0000; /* Vermelho */
+    --color-dark: #333333; /* Cinza escuro */
+    --color-light: #FFFFFF; /* Branco */
+    --color-text: #000000; /* Preto */
+    --font-primary: 'Nunito', sans-serif;
 }
 
-/* Reset básico */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+/* Estilos Globais */
+body, h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link {
+    font-family: var(--font-primary);
+    color: var(--color-text);
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--light-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-}
-
-/* Estilos do cabeçalho */
+/* Cabeçalho */
 header {
-    background-color: var(--dark-color);
-    color: var(--light-color);
-    padding: 1rem 0;
+    background-color: var(--color-primary);
+    color: var(--color-light);
     text-align: center;
+    padding: 1rem 0;
 }
 
-header img {
-    max-height: 80px; /* Ajuste conforme necessário */
+.logo-header {
+    height: 60px;
+    margin-bottom: 0.5rem;
 }
 
-/* Estilos do conteúdo principal */
-main {
-    padding: 2rem;
-    margin-top: 100px; /* Espaço para o cabeçalho */
+/* Estilização do formulário para corresponder ao estilo do site */
+.form-control, .form-control-file {
+    border: 2px solid var(--color-dark);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
 }
 
-/* Estilos do formulário */
-.form-group {
-    margin-bottom: 1rem;
-}
-
-.form-control,
-.form-control-file,
+/* Botões Primários */
 .btn-primary {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-}
-
-.btn-primary {
-    color: var(--light-color);
-    background-color: var(--secondary-color);
+    background-color: var(--color-secondary);
     border: none;
-    cursor: pointer;
+    color: var(--color-light);
+    padding: 0.75rem 1.25rem;
+    margin-top: 1rem;
 }
 
 .btn-primary:hover {
-    background-color: darken(var(--secondary-color), 10%);
+    background-color: darken(var(--color-secondary), 10%);
 }
 
-/* Estilos do rodapé */
+/* Rodapé */
 footer {
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 1rem;
     text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-    header img {
-        height: 60px; /* Menor altura para telas pequenas */
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1rem;
     }
 
-    main {
-        padding: 1rem;
-        margin-top: 120px; /* Mais espaço para o cabeçalho em telas pequenas */
+    header .logo-header {
+        height: 40px;
     }
 }

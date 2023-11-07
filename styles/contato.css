@@ -1,58 +1,99 @@
-/* contato.css */
-:root {
-    --primary-color: #FFD700; /* Amarelo Dourado */
-    --secondary-color: #FF0000; /* Vermelho */
-    --text-color: #000; /* Preto */
-    --background-color: #fff; /* Branco */
-    --dark-color: #333; /* Cinza escuro */
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+/* Reset CSS (opcional, para garantir que todos os navegadores comecem com os mesmos estilos padrão) */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.bg-primary {
-    background-color: var(--primary-color);
+/* Variáveis Globais */
+:root {
+    --color-primary: #FFD700; /* Amarelo Dourado */
+    --color-secondary: #FF0000; /* Vermelho */
+    --color-dark: #333333; /* Cinza escuro */
+    --color-light: #FFFFFF; /* Branco */
+    --color-text: #000000; /* Preto */
+    --font-primary: 'Nunito', sans-serif; /* Nunito como a fonte primária */
 }
 
-.bg-dark {
-    background-color: var(--dark-color);
+/* Estilos Globais */
+body, h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link {
+    font-family: var(--font-primary);
+    color: var(--color-text);
 }
 
-.text-white {
-    color: var(--background-color);
+/* Cabeçalho e Navegação */
+header {
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.container h2 {
-    margin-bottom: 2rem;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
 
-.form-group label {
-    font-weight: bold;
+.navbar-brand {
+    color: var(--color-light);
+    font-weight: 700; /* Nunito bold para o logotipo */
+    font-size: 1.5rem; /* Tamanho grande para destaque */
 }
 
-.btn-secondary {
-    background-color: var(--secondary-color);
-    color: var(--background-color);
+.navbar-brand img {
+    height: 50px; /* Logo tamanho fixo */
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: var(--color-light);
+    margin-left: 1rem; /* Espaçamento entre links */
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 1rem; /* Espaçamento interno */
+}
+
+/* Botões */
+.btn {
+    font-weight: 700; /* Nunito bold para botões */
+    padding: 0.75rem 1.25rem;
+}
+
+.btn-danger {
+    background-color: var(--color-secondary);
     border: none;
-    padding: 0.75rem 1.5rem;
-    transition: background-color 0.2s;
 }
 
-.btn-secondary:hover {
-    background-color: darken(var(--secondary-color), 10%);
+/* Formulários */
+.form-control {
+    border: 2px solid var(--color-dark);
+    border-radius: 0.25rem; /* Borda arredondada sutil */
+    padding: 0.5rem;
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 15px;
+/* Rodapé */
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1rem; /* Tamanho menor para telas menores */
+    }
+
+    .navbar-brand img {
+        height: 40px; /* Logo tamanho menor para telas menores */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem; /* Tamanho menor para links em telas menores */
     }
 }
-
-/* Link para o arquivo principal de estilos se necessário para sobrescrever ou adicionar estilos */
-@import url('styles.css');
