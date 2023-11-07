@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caldinho do Dogão</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Navbar do Bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <a class="navbar-brand" href="#">
+                <img src="/imgs/logo.png" alt="Logomarca do Caldinho do Dogão" id="logo" class="d-inline-block align-top">
+               <h1> Caldinho do Dogão </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index.html">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cardapio.html">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main role="main" class="container mt-4">
+        <!-- Utilize classes do Bootstrap para o layout -->
+        <section id="reservas">
+            <h2>Reserve sua Mesa</h2>
+            <form id="reserva-form">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade-pessoas">Quantidade de Pessoas:</label>
+                    <input type="number" id="quantidade-pessoas" name="quantidade-pessoas" class="form-control" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="comanda-individual">Comanda Individual:</label>
+                    <select id="comanda-individual" name="comanda-individual" class="form-control">
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-danger">Reservar Mesa</button>
+            </form>
+        </section>
+        <!-- Mais conteúdo aqui -->
+    </main>
+    
+    <footer class="bg-dark text-white mt-4 py-3 text-center">
+        <p>&copy; 2023 Caldinho do Dogão. Todos os direitos reservados.</p>
+    </footer>
+    
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/scripts/scripts.js"></script>
+</body>
+</html>

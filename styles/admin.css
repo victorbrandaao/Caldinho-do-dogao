@@ -1,0 +1,89 @@
+/* Variáveis de cores */
+:root {
+    --primary-color: #FFD700; /* Amarelo Dourado */
+    --secondary-color: #FF0000; /* Vermelho */
+    --dark-color: #343a40; /* Cinza escuro */
+    --light-color: #FFFFFF; /* Branco */
+    --text-color: #000000; /* Preto */
+}
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header img {
+    max-height: 80px; /* Ajuste conforme necessário */
+}
+
+/* Estilos do conteúdo principal */
+main {
+    padding: 2rem;
+    margin-top: 100px; /* Espaço para o cabeçalho */
+}
+
+/* Estilos do formulário */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control,
+.form-control-file,
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    color: var(--light-color);
+    background-color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header img {
+        height: 60px; /* Menor altura para telas pequenas */
+    }
+
+    main {
+        padding: 1rem;
+        margin-top: 120px; /* Mais espaço para o cabeçalho em telas pequenas */
+    }
+}

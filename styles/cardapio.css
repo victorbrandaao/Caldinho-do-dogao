@@ -1,0 +1,97 @@
+/* Variáveis de cores */
+:root {
+    --primary-color: #FFD700; /* Amarelo Dourado */
+    --secondary-color: #FF0000; /* Vermelho */
+    --text-color: #000; /* Preto */
+    --background-color: #fff; /* Branco */
+    --dark-color: #333; /* Cinza escuro */
+}
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: var(--dark-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Estilos do cardápio */
+#cardapio {
+    padding: 4rem 0;
+    background-image: url('/path/to/your-background-image.jpg'); /* Caminho para a imagem de fundo do cardápio */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#cardapio h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#cardapio .card {
+    background: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#cardapio .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+#cardapio .card-body {
+    padding: 1.5rem;
+}
+
+#cardapio .card-title {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+#cardapio .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--dark-color);
+}
+
+#cardapio .text-muted {
+    font-size: 0.875rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #cardapio .card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Link para o arquivo principal de estilos se necessário para sobrescrever ou adicionar estilos */
+@import url('styles.css');

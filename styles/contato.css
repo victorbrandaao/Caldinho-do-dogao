@@ -1,0 +1,58 @@
+/* contato.css */
+:root {
+    --primary-color: #FFD700; /* Amarelo Dourado */
+    --secondary-color: #FF0000; /* Vermelho */
+    --text-color: #000; /* Preto */
+    --background-color: #fff; /* Branco */
+    --dark-color: #333; /* Cinza escuro */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-dark {
+    background-color: var(--dark-color);
+}
+
+.text-white {
+    color: var(--background-color);
+}
+
+.container h2 {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Link para o arquivo principal de estilos se necessário para sobrescrever ou adicionar estilos */
+@import url('styles.css');

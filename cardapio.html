@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Caldinho do Dogão</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/cardapio.css">
+</head>
+<body>
+    <header>
+        <!-- Navbar do Bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <a class="navbar-brand" href="#">
+                <img src="/imgs/logo.png" alt="Logomarca do Caldinho do Dogão" id="logo" class="d-inline-block align-top">
+               <h1> Caldinho do Dogão </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index.html">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cardapio.html">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="py-5">
+        <div class="container">
+            <h2 class="text-center text-dark mb-5">Cardápio</h2>
+            <div class="row">
+                <!-- Seção Happy Hour -->
+                <div class="col-md-4 mb-3">
+                    <h3 class="text-secondary mb-3">Happy Hour</h3>
+                    <!-- Item do Happy Hour -->
+                    <div class="card mb-3">
+                        <img src="/imgs/caldinho.png" class="card-img-top" alt="Nome do Item">
+                        <div class="card-body">
+                            <h5 class="card-title">Nome do Item</h5>
+                            <p class="card-text">Descrição curta do item do happy hour.</p>
+                            <p class="card-text"><small class="text-muted">Preço</small></p>
+                        </div>
+                    </div>
+                    <!-- Repetir a estrutura do item para outros itens do Happy Hour -->
+                </div>
+                <!-- Incluir outras categorias conforme necessário -->
+            </div>
+        </div>
+    </main>
+    
+    <footer class="bg-dark text-white mt-4 py-3 text-center">
+        <p>&copy; 2023 Caldinho do Dogão. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
